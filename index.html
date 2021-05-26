@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WebDown</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-markdown.min.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="center">
+		<div class="section code">
+			<textarea id="editing" spellcheck="false"
+				oninput="update(this.value); sync_scroll(this);" onscroll="sync_scroll(this);"
+				onkeydown="check_tab(this, event);"></textarea>
+				
+			<pre id="highlighting" aria-hidden="true">
+
+			<code class="language-markdown" id="highlighting-content">
+# Start Typing!</code>
+		</div>
+		<div class="section output">Output</div>
+	</div>
+</body>
+
+</html>
