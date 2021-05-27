@@ -22,11 +22,26 @@ html {
 }
 
 .section {
-	width: calc(45vw - 10px);
+	width: calc(45vw);
+	height: 100%
 }
 
 .section.code {
 	margin: 0;
+}
+
+.markdown-body {
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 45px;
+}
+
+@media (max-width: 767px) {
+	.markdown-body {
+		padding: 15px;
+	}
 }
 
 #editing {
@@ -40,8 +55,8 @@ html {
 	padding: 10px;
 	border: 0;
 	outline: none;
-	width: calc(45vw - 10px);
-	height: 150px;
+	width: calc(45vw - 40px);
+	height: calc(100% - 40px);
 }
 
 #editing,
@@ -54,7 +69,6 @@ html {
 
 #editing,
 #highlighting {
-	/* Together? */
 	position: absolute;
 	top: 0;
 }
@@ -101,7 +115,7 @@ pre[class*='language-'] {
 	font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
 	text-align: left;
-	white-space: pre;
+	white-space: pre-wrap;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;

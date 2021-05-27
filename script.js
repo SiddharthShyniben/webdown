@@ -4,6 +4,8 @@ function update(text) {
 	result_element.innerHTML = text.replace(new RegExp("&", "g"), "&amp;").replace(new RegExp("<", "g"), "&lt;"); /* Global RegExp */
 	// Syntax Highlight
 	Prism.highlightElement(result_element);
+	// Parse markdown
+	document.querySelector(".markdown-body").innerHTML = marked(text)
 }
 
 function sync_scroll(element) {
